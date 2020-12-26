@@ -107,7 +107,7 @@ def message(text, timeout):
     for var in text[0:len(text) - 1]:
         print(listtostr(doneletters) + var)
         sl(timeout)
-        cmd('powershell -c clear')
+        cmd('clear')
         doneletters.append(var)
     print(listtostr(doneletters) + text[text.index(var) + 1])
 
