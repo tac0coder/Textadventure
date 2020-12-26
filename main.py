@@ -161,5 +161,3 @@ if input() == '':
                 print('\x1b[6;31m' + str(e) + '\x1b[0m')
         else:
             print("\x1b[6;31mYour command isn't a valid command.\x1b[0m")
-
-# %%
