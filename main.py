@@ -9,6 +9,8 @@ ores = []
 
 # FIXME not returning ores
 
+# DOES IT SYNC????
+
 
 def mine():
     global ores
