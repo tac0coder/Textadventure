@@ -1,0 +1,16 @@
+#chat_input{
+position:fixed;
+bottom:0;
+width:1600px;
+height:20px ;}
+#send{
+  position:fixed;
+bottom:0;
+right:0;
+height:20px;
+width: 100px;
+}
+*{
+  padding-bottom:8px;
+
+}
