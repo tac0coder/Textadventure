@@ -1,4 +1,4 @@
-import shopp
+from shopp import *
 import os
 import pickle
 
@@ -9,7 +9,6 @@ ores = []
 
 # FIXME not returning ores
 
-# DOES IT SYNC????
 
 
 def mine():
