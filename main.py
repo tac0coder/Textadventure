@@ -1,7 +1,7 @@
 from shopp import *
 import os
 import pickle
-
+from classes import *
 inventorydic = {}
 ores = []
 
@@ -10,11 +10,11 @@ ores = []
 # FIXME not returning ores
 
 
-
 def mine():
     global ores
     if 'miner' in list(inventorydic):
         ores = inventorydic['pickaxe'].trigger()
+        print(ores)
 
 
 def exit():
@@ -41,7 +41,7 @@ def exit():
 
         def clear():
             from os import system as cmd
-            cmd('clear')
+            cmd('cls')
         while True:
             prog = input('\x1b[6;33m'+'>>> '+'\x1b[0m')
             getothercode = ''
@@ -108,34 +108,9 @@ def message(text, timeout):
     for var in text[0:len(text) - 1]:
         print(listtostr(doneletters) + var)
         sl(timeout)
-        cmd('clear')
+        cmd('cls')
         doneletters.append(var)
     print(listtostr(doneletters) + text[text.index(var) + 1])
-
-
-class item():
-    def __init__(self,
-                 quantity: int,
-                 item: str,
-                 description: str,
-                 code: list = None, type=None):
-        global inventorydic
-        self.quantity = str(quantity)
-        self.item = item
-        self.description = description
-        self.get = (self.quantity, self.item, self.description)
-        self.code = code
-        inventorydic[type] = self
-# FIXME:TRY scrap it and change the trigger function to 'mine' and make a new function for miners?
-
-    def trigger(self):
-        if self.code != None:
-            for line in self.code:
-                exec(line)
-            try:
-                return ores
-            except:
-                pass
 
 
 message(
@@ -144,13 +119,17 @@ message(
     0.05)
 dynamite = item(
     5, 'dynamite', 'Blows stuff up in mine or explore modes', type='dynamite')
+dynamite.add(inventorydic)
 coins = item(500, 'coins', 'Money to be used in shop', type='coins')
+coins.add(inventorydic)
 pickaxe = item(
     1, 'pickaxe tier 1',
     'Used to mine stuff at mine or explore at 1 ore per 3 secs, chance of mining ores: diamond:1%,gold:10%,iron:25%,stone:64%',
     [
         'import run', 'ores = run.main(3,1,1)', 'print("Done Mining!")'], 'pickaxe')
+pickaxe.add(inventorydic)
 miner = item(1, 'miner', 'Mines ores with \033[4mpickaxe\033[0m', type='miner')
+miner.add(inventorydic)
 if input() == '':
 
     while True:

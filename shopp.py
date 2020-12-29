@@ -19,13 +19,13 @@ items = {
     'Miner boost': ['Boost Miner Strength by 5%', 30, 'Miner Boost']
 }
 code = {
-    'pickaxe tier 1': [
-        'import run', 'ores=run.main(3,1,1)', 'print("Done Mining!")'],
-    'pickaxe tier 2': [
-        'import run', 'ores=run.main(1.5,2,1)', 'print("Done Mining!")'],
-    'pickaxe tier 3': [
-        'import run', 'ores=run.main(1.5,3,5)', 'print("Done Mining!")'], 'drill': [
-        'import run', 'ores=run.main(0.5,1,3)', 'print("Done Mining!")'],
+    'pickaxe tier 1':
+        (3, 1, 1),
+    'pickaxe tier 2':
+        (1.5, 2, 1),
+    'pickaxe tier 3':
+        (1.5, 3, 5), 'drill':
+        (0.5, 1, 3),
     'miner': None,
     'Miner boost': None
 }

@@ -24,6 +24,7 @@ def main(timesleep, tier, ores_per):
             for i in range(1, ores_per+1):
                 ores.append(percent(f"pickaxe tier {tier}"))
             print(f'Ores mining:{ores[-1]},Ores Mined:{len(ores)}')
+            print(ores)
         except KeyboardInterrupt as e:
-            break
+            print('Done Mining!')
     return ores
