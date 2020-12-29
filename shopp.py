@@ -16,7 +16,8 @@ items = {
         150, 'pickaxe'
     ],
     'miner': ['Mines stuff with \033[4mpickaxe\033[0m', 75, 'miner'],
-    'Miner boost': ['Boost Miner Strength by 5%', 30, 'Miner Boost']
+    'Miner boost': ['Boost Miner Strength by 5%', 30, 'Miner Boost'],
+    'dynamite': ['Blows stuff up in mine or explore modes', 50, 'dynamite']
 }
 code = {
     'pickaxe tier 1':
@@ -27,7 +28,8 @@ code = {
         (1.5, 3, 5), 'drill':
         (0.5, 1, 3),
     'miner': None,
-    'Miner boost': None
+    'Miner boost': None,
+    'dynamite': None
 }
 tiers = {
     'pickaxe tier 1': {
