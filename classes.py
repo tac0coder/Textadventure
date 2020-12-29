@@ -13,7 +13,7 @@ class item():
 # FIXM:E:TRY scrap it and change the trigger function to 'mine' and make a new function for miners?
 
     def mine(self):
-        __import__('run').main()
+        __import__('run').main(code)
 
 
 class ore():
